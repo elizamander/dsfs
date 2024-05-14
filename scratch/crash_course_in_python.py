@@ -762,7 +762,12 @@ def comma_repeater(s: str, n: int) -> str:
     n_copies = [s for _ in range(n)]
     return ', '.join(n_copies)
 
+def and_repeater(s: str, n: int) -> str:
+    n_copies = [s for _ in range(n)]
+    return ' and '.join(n_copies)
+
 assert twice(comma_repeater, "type hints") == "type hints, type hints"
+assert twice(and_repeater, "type hints") == "type hints and type hints"
 
 Number = int
 Numbers = List[Number]
