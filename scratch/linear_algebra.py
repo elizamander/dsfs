@@ -77,6 +77,8 @@ def magnitude(v: Vector) -> float:
 
 assert magnitude([3, 4]) == 5
 
+# magnitude is basically pythagorean theorem (a^2 + b^2 = c^2)
+
 def squared_distance(v: Vector, w: Vector) -> float:
     """Computes (v_1 - w_1) ** 2 + ... + (v_n - w_n) ** 2"""
     return sum_of_squares(subtract(v, w))
@@ -88,6 +90,8 @@ def distance(v: Vector, w: Vector) -> float:
 
 def distance(v: Vector, w: Vector) -> float:  # type: ignore
     return magnitude(subtract(v, w))
+
+# ^ this is all pythagorean again, but zoomed out to two vectors
 
 # Another type alias
 Matrix = List[List[float]]
